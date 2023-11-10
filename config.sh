@@ -9,3 +9,8 @@ pip install -r requirements.txt
 deactivate
 cp /home/vagrant/Pax-var/database/database.sqlite /home/vagrant/Pax-Academia/database/database.sqlite
 cp /home/vagrant/Pax-var/env/.env /home/vagrant/Pax-Academia/.env
+cp /home/vagrant/Pax-var/start.sh /home/vagrant/start.sh
+cd /home/vagrant
+tr -d '\r' < start.sh > start_unix.sh
+mv start_unix.sh start.sh
+chmod +x start.sh
